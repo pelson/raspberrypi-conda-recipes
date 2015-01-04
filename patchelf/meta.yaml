@@ -1,0 +1,9 @@
+package:
+  name: patchelf
+  version: 0.8
+
+source:
+  fn: patchelf-0.8.tar.gz
+  url: http://nixos.org/releases/patchelf/patchelf-0.8/patchelf-0.8.tar.gz
+
+

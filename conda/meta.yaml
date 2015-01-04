@@ -1,0 +1,22 @@
+package:
+  name: conda
+  version: 3.7.4
+
+source:
+  git_url: https://github.com/conda/conda
+  git_tag: 3.7.4
+
+# NOTE: Conda-build has been modified to *always* read from the prefix-files.txt file.
+# See https://github.com/conda/conda.
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+    - pycosat
+    - pyyaml
+    - requests
+
+build:
+  number: 3

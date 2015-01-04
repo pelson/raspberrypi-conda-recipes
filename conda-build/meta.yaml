@@ -1,0 +1,21 @@
+package:
+   name: conda-build
+   version: 1.9.2.dev
+
+source:
+  git_url: https://github.com/pelson/conda-build
+  git_tag: 07c97bf989a338c453935480186b96860538b82a
+
+requirements:
+   build:
+     - python
+   run:
+     - python
+     - patchelf
+
+build:
+  number: 1
+
+test:
+   imports:
+     - conda_build
