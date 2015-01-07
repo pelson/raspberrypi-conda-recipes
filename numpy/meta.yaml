@@ -1,0 +1,22 @@
+package:
+  name: numpy
+  version: 1.8.2
+
+source:
+  fn: numpy-1.8.2.tar.gz
+  url: https://pypi.python.org/packages/source/n/numpy/numpy-1.8.2.tar.gz
+
+requirements:
+  build:
+    # NOTE: requires "apt-get install gfortran libatlas-dev"
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - numpy
+
+about:
+  home: http://numpy.scipy.org/
+  license: BSD
