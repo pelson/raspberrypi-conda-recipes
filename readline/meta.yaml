@@ -1,0 +1,28 @@
+package:
+  name: readline
+  version: "6.3"
+
+source:
+  fn: readline-6.3.tar.gz
+  url: http://ftp.gnu.org/gnu/readline/readline-6.3.tar.gz
+  sha1: 017b92dc7fd4e636a2b5c9265a77ccc05798c9e1
+  patches:
+    - libtinfo.patch
+
+build:
+  number: 0
+  script: |
+    ./configure --prefix=$PREFIX --enable-shared --with-curses
+    make
+    make install
+    rm -f $PREFIX/share/info/dir
+
+requirements:
+  build:
+    - ncurses
+  run:
+    - ncurses
+
+about:
+  home: http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
+  license: GPL3

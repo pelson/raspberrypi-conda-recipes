@@ -1,0 +1,11 @@
+--- shlib/Makefile.in.orig
++++ shlib/Makefile.in
+@@ -174,7 +174,7 @@
+ 
+ $(SHARED_READLINE):	$(SHARED_OBJ)
+ 	$(RM) $@
+-	$(SHOBJ_LD) ${SHOBJ_LDFLAGS} ${SHLIB_XLDFLAGS} -o $@ $(SHARED_OBJ) $(SHLIB_LIBS)
++	$(SHOBJ_LD) ${SHOBJ_LDFLAGS} ${SHLIB_XLDFLAGS} -o $@ $(SHARED_OBJ) $(SHLIB_LIBS) -ltinfo
+ 
+ $(SHARED_HISTORY):	$(SHARED_HISTOBJ) xmalloc.so xfree.so
+ 	$(RM) $@

@@ -1,0 +1,25 @@
+package:
+  name: sqlite
+  version: "3.8.7.3"
+
+source:
+  fn: sqlite-autoconf-3080703.tar.gz
+  url: http://www.sqlite.org/2014/sqlite-autoconf-3080704.tar.gz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - readline
+  run:
+    - readline
+
+test:
+  commands:
+    - sqlite3 --version
+
+about:
+  home: https://sqlite.org
+  license: Public Domain
+  summary: SQLite embedded database

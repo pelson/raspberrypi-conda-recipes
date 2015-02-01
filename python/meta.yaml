@@ -1,0 +1,50 @@
+package:
+  name: python
+  version: "2.7.9"
+
+source:
+  fn: Python-2.7.9.tar.xz
+  url: https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tar.xz
+  patches:
+    - buildinfo.patch
+    - getpath.patch
+
+build:
+  number: 1
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - zlib
+    - readline
+    - sqlite
+    - bzip2
+#    - gdbm
+#    - xz
+    - openssl
+#    - tk
+  run:
+    - zlib
+    - readline
+    - sqlite
+    - bzip2
+#    - gdbm
+#    - xz
+    - openssl
+#    - tk
+
+test:
+  commands:
+    - python --version
+    - python-config --prefix
+  imports:
+    - sys
+    - os
+    - sqlite3
+    - readline
+    - bz2
+    - ssl
+
+about:
+  home: https://www.python.org
+  license: PSF

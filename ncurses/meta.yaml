@@ -1,0 +1,18 @@
+package:
+  name: ncurses
+  version: "5.9"
+
+source:
+  fn: ncurses-5.9.tar.gz
+  url: http://ftp.gnu.org/pub/gnu/ncurses/ncurses-5.7.tar.gz
+
+build:
+  detect_binary_files_with_prefix: true
+
+test:
+  commands:
+    - tic -V
+
+about:
+  home: https://www.gnu.org/software/ncurses/ncurses.html
+  license: ncurses

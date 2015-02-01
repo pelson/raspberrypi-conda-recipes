@@ -1,0 +1,23 @@
+--- Lib/platform.py.orig
++++ Lib/platform.py
+@@ -1179,7 +1179,7 @@
+ ### Various APIs for extracting information from sys.version
+ 
+ _sys_version_parser = re.compile(
+-    r'([\w.+]+)\s*'
++    r'([\w.+]+)\s* for RaspberryPi\.\s*'
+     '\(#?([^,]+),\s*([\w ]+),\s*([\w :]+)\)\s*'
+     '\[([^\]]+)\]?', re.ASCII)
+ 
+--- Python/getversion.c.orig
++++ Python/getversion.c
+@@ -9,7 +9,8 @@
+ Py_GetVersion(void)
+ {
+ 	static char version[250];
+-	PyOS_snprintf(version, sizeof(version), "%.80s (%.80s) %.80s",
++	PyOS_snprintf(version, sizeof(version),
++                      "%.80s for RaspberryPi. (%.80s) %.80s",
+ 		      PY_VERSION, Py_GetBuildInfo(), Py_GetCompiler());
+ 	return version;
+ }
