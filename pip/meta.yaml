@@ -1,0 +1,21 @@
+package:
+  name: pip
+  version: "1.5.6"
+
+source:
+  git_url: https://github.com/pypa/pip
+  git_tag: 1.5.6
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - setuptools
+
+test:
+  commands:
+    - pip --help
+  imports:
+    - pip

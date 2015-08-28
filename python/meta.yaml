@@ -19,8 +19,6 @@ requirements:
     - readline
     - sqlite
     - bzip2
-#    - gdbm
-#    - xz
     - openssl
 #    - tk
   run:
@@ -28,8 +26,6 @@ requirements:
     - readline
     - sqlite
     - bzip2
-#    - gdbm
-#    - xz
     - openssl
 #    - tk
 

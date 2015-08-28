@@ -1,0 +1,23 @@
+package:
+  name: conda-env
+  version: 2.1.4
+
+source:
+  git_url: https://github.com/conda/conda-env
+  git_tag: v2.1.4
+
+build:
+  always_include_files:
+    - bin/activate
+    - bin/deactivate
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+    - conda
+ 
+test:
+  commands:
+    - conda env -h

@@ -1,10 +1,10 @@
 package:
    name: conda-build
-   version: 1.9.2.dev
+   version: 1.13.0
 
 source:
-  git_url: https://github.com/pelson/conda-build
-  git_tag: 07c97bf989a338c453935480186b96860538b82a
+  git_url: https://github.com/conda/conda-build
+  git_tag: 1.13.0
 
 requirements:
    build:
@@ -12,10 +12,13 @@ requirements:
    run:
      - python
      - patchelf
+     - conda
 
 build:
   number: 1
 
 test:
+   commands:
+     - conda build --help
    imports:
      - conda_build

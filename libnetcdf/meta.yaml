@@ -4,8 +4,8 @@ package:
 
 source:
   fn: netcdf-4.2.1.1.tar.gz
-  url: http://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-4.2.1.1.tar.gz
-  md5: 5eebcf19e6ac78a61c73464713cbfafc
+  url: https://github.com/Unidata/netcdf-c/archive/netcdf-4.2.1.1.tar.gz
+  md5: 42875052d3b8639e273afb3f988c4430
 
 requirements:
   build:
