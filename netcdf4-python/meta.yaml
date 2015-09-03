@@ -6,14 +6,17 @@ source:
   git_tag: v1.1.3rel
   git_url: https://github.com/Unidata/netcdf4-python.git
 
+build:
+  number: 1
+
 requirements:
   build:
     - python
-    - numpy
+    - numpy 1.8.*
     - libnetcdf
   run:
     - python
-    - numpy
+    - numpy 1.8.*
     - libnetcdf
 
 test:

@@ -7,6 +7,9 @@ source:
   url: https://pypi.python.org/packages/source/P/Pillow/Pillow-2.5.1.zip
   md5: cf42c695fab68116af2c8ef816fca0d9
 
+build:
+  number: 1
+
 requirements: 
   build:
     - python

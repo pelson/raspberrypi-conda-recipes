@@ -1,10 +1,10 @@
 package:
   name: conda-env
-  version: 2.1.4
+  version: 2.4.2
 
 source:
   git_url: https://github.com/conda/conda-env
-  git_tag: v2.1.4
+  git_tag: v2.4.2
 
 build:
   always_include_files:

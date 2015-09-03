@@ -9,7 +9,7 @@ source:
 build:
   script:
     - $PYTHON setup.py install
-  number: 2
+  number: 3
 
 requirements:
   build:

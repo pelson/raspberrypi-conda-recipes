@@ -1,0 +1,20 @@
+package:
+  name: cython
+  version: 0.23.1
+
+source:
+  git_url: git@github.com:cython/cython.git
+  git_tag: 0.23.1
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - cython
+  commands:
+    - cython --help

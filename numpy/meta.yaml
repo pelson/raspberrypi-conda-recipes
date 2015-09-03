@@ -6,6 +6,9 @@ source:
   fn: numpy-1.8.2.tar.gz
   url: https://pypi.python.org/packages/source/n/numpy/numpy-1.8.2.tar.gz
 
+build:
+  number: 1
+
 requirements:
   build:
     # NOTE: requires "apt-get install gfortran libatlas-dev"
