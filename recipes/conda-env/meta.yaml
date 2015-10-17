@@ -21,3 +21,5 @@ requirements:
 test:
   commands:
     - conda env -h
+    - command -v activate
+    - command -v deactivate

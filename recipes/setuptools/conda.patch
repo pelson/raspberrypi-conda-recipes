@@ -1,0 +1,11 @@
+--- setuptools/package_index.py.orig	2015-10-17 04:15:42.989111242 +0000
++++ setuptools/package_index.py	2015-10-17 04:16:46.006285065 +0000
+@@ -281,6 +281,8 @@
+         """Evaluate a URL as a possible download, and maybe retrieve it"""
+         if url in self.scanned_urls and not retrieve:
+             return
++        if os.environ.get('CONDA_BUILD'):
++            raise RuntimeError("Setuptools downloading is disabled in conda build  url=%sr" % url)
+         self.scanned_urls[url] = True
+         if not URL_SCHEME(url):
+             self.process_filename(url)

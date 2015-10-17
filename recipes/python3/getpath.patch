@@ -1,0 +1,24 @@
+Modify getpath.c to not dereference symlinks
+
+When CPython is trying to find it's sys.prefix it normally follows the
+symlink of the binary in order to find the installed location.
+However in conda the binary will always (often) be a symlink from the
+environment to the actual binary in the unpacked package.  So this
+patch disables the dereferencing of this symlink.
+
+A major consequence is that somone can not simply symlink our Python
+binary to somewhere since then Python can no longer find sys.prefix
+and will be lost.  There really should be no need for such a thing
+however.
+
+--- Modules/getpath.c.orig
++++ Modules/getpath.c
+@@ -606,7 +606,7 @@
+     }
+ #endif
+ 
+-#if HAVE_READLINK
++#if 0
+     {
+         wchar_t tmpbuffer[MAXPATHLEN+1];
+         int linklen = _Py_wreadlink(progpath, tmpbuffer, MAXPATHLEN);

@@ -1,0 +1,19 @@
+package:
+  name: openssl
+  version: "1.0.1p"
+
+source:
+  fn: openssl-1.0.1p.tar.gz
+  url: https://www.openssl.org/source/openssl-1.0.1p.tar.gz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - zlib
+  run:
+    - zlib
+
+about:
+  home: https://www.openssl.org

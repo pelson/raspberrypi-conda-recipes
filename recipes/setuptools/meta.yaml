@@ -1,0 +1,28 @@
+{% set version= "18.4" %}
+
+package:
+  name: setuptools
+  version: {{ version }}
+
+source:
+  url: https://bitbucket.org/pypa/setuptools/get/{{ version }}.tar.gz
+  fn: setuptools-{{ version }}.tar.gz
+  patches:
+     - conda.patch
+     # I don't really like the solution, but the patch ensures that singe-version-externally managed is always enabled.
+     - flat_egg.patch
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+test:
+  imports:
+   - setuptools
+  commands:
+   - easy_install --version
