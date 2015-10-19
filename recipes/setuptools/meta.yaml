@@ -1,0 +1,32 @@
+package:
+  name: setuptools
+  version: 18.4
+
+source:
+  url: https://bitbucket.org/pypa/setuptools/get/18.4.tar.gz
+  fn: setuptools-18.4.tar.gz
+
+build:
+  number: 20
+  preserve_egg_dir: True
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - pkg_resources
+    - pkg_resources._vendor
+    - pkg_resources._vendor.packaging
+    - setuptools
+    - setuptools.command
+  commands:
+    - easy_install --help
+
+about:
+  home: https://bitbucket.org/pypa/setuptools
+  license: Python Software Foundation License or Zope Public License
+  summary: 'Easily download, build, install, upgrade, and uninstall Python packages'
