@@ -12,6 +12,10 @@ requirements:
     - setuptools
   run:
     - python
+    - setuptools
+
+build:
+  preserve_egg_dir: True
 
 test:
   imports:

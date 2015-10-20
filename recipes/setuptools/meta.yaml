@@ -9,11 +9,10 @@ source:
   fn: setuptools-{{ version }}.tar.gz
   patches:
      - conda.patch
-     # I don't really like the solution, but the patch ensures that singe-version-externally managed is always enabled.
-     - flat_egg.patch
 
 build:
-  number: 0
+  number: 1
+  preserve_egg_dir: True
 
 requirements:
   build:
@@ -23,6 +22,15 @@ requirements:
 
 test:
   imports:
-   - setuptools
+    - pkg_resources
+    - pkg_resources._vendor
+    - pkg_resources._vendor.packaging
+    - setuptools
+    - setuptools.command
   commands:
-   - easy_install --version
+    - easy_install --version
+
+about:
+  home: https://bitbucket.org/pypa/setuptools
+  license: Python Software Foundation License or Zope Public License
+  summary: 'Easily download, build, install, upgrade, and uninstall Python packages'
