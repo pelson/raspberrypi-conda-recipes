@@ -12,10 +12,11 @@ requirements:
     - setuptools
   run:
     - python
-    - setuptools
 
 build:
-  preserve_egg_dir: True
+  entry_points:
+    - cython = Cython.Compiler.Main:setuptools_main
+    - cythonize = Cython.Build.Cythonize:main
 
 test:
   imports:
