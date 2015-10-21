@@ -18,7 +18,7 @@ requirements:
     - libtiff
     - jpeg
     - freetype
-    - distribute
+    - setuptools
   run:
     - python
     - jpeg               [unix]
@@ -34,4 +34,4 @@ test:
 
 about:
   home: http://python-imaging.github.io/
-  license: Standard PIL license
+  license: PIL

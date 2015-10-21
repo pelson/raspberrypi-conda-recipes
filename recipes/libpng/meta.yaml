@@ -1,0 +1,15 @@
+package:
+  name: libpng
+  version: 1.5.13
+
+source:
+  fn: libpng-1.5.13.tar.gz
+  url: http://sourceforge.net/projects/libpng/files/libpng15/1.5.23/libpng-1.5.23.tar.gz/download
+
+requirements:
+  build:
+    - zlib
+
+about:
+  home: http://www.libpng.org/pub/png/libpng.html
+  license: Open Source (http://www.libpng.org/pub/png/src/libpng-LICENSE.txt)
