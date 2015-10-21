@@ -13,10 +13,17 @@ requirements:
     - setuptools
   run:
     - python
-    - setuptools
+
+build:
+  entry_points:
+    - pip=pip:main
+    - pip{{ PY_VER[:1] }}=pip:main
+    - pip{{ PY_VER }}=pip:main
 
 test:
   commands:
-    - pip --help
+    - pip --version
+    - pip{{ PY_VER[:1] }} --version
+    - pip{{ PY_VER }} --help
   imports:
     - pip
