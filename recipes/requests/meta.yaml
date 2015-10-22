@@ -1,0 +1,40 @@
+package:
+  name: requests
+  version: 2.0.1
+
+source:
+  fn: requests-2.0.1.tar.gz
+  url: https://pypi.python.org/packages/source/r/requests/requests-2.0.1.tar.gz
+  md5: 38e61c2856d2ba2782286730241975e6
+#  patches:
+#    - pyopenssl.patch
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - requests.packages
+    - requests.packages.urllib3.contrib
+    - requests.packages.urllib3
+    - requests.packages.charade
+    - requests.packages.urllib3.packages.ssl_match_hostname
+    - requests
+    - requests.packages.urllib3.packages
+#    - requests.packages.urllib3.contrib.pyopenssl #[py2k]
+
+#  requires: #[py2k]
+#    # Put any additional test requirements here.  For example
+#    - pyopenssl #[py2k]
+#    - ndg-httpsclient #[py2k]
+#    - pyasn1 #[py2k]
+
+about:
+  home: http://python-requests.org
+  license: Apache Software License
+

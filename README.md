@@ -2,7 +2,7 @@ About
 -----
 A repository of conda recipes for the RaspberryPi. All build distributions are available on binstar at:
 
-https://binstar.org/RaspberryPi
+https://anaconda.org/RaspberryPi
 
 If you already have conda installed on the RaspberryPi (via the miniconda installer or otherwise), simply add the
 raspberrypi channel and run ``conda update --all``.

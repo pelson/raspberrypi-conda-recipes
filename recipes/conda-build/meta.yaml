@@ -1,10 +1,10 @@
 package:
    name: conda-build
-   version: 1.17.0
+   version: 1.18.1
 
 source:
   git_url: https://github.com/conda/conda-build
-  git_tag: 1.17.0
+  git_tag: 1.18.1
 
 requirements:
    build:
@@ -19,6 +19,6 @@ build:
 
 test:
    commands:
-     - conda build --help
+     - CONDA_NPY=19 conda build --help
    imports:
      - conda_build
