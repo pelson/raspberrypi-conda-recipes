@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Exceptions:
 
-Sourced from github.com/conda/conda-recipes (BSD 3-clause under Continuum Analytics, Inc.):
+Sourced from github.com/conda/conda-recipes (BSD 3-clause under Continuum Analytics, Inc.), but with major/minor modifications:
  -  recipes/
             six
             requests
@@ -41,4 +41,6 @@ Sourced from github.com/conda/conda-recipes (BSD 3-clause under Continuum Analyt
             conda
             conda-env
             conda-build
+            jinja2
+            markupsafe
 

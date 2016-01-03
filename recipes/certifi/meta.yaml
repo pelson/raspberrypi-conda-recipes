@@ -1,0 +1,28 @@
+package:
+  name: certifi
+  version: "2015.9.6.2"
+
+source:
+  fn: certifi-2015.9.6.2.tar.gz
+  url: https://pypi.python.org/packages/source/c/certifi/certifi-2015.9.6.2.tar.gz
+  md5: 323884431b31aa0eccb5f8086d92196b
+
+build:
+  number: 1
+  script: |
+    python setup.py install
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - certifi
+
+about:
+  home: http://certifi.io
+  license: MPL2

@@ -1,10 +1,10 @@
 package:
   name: conda
-  version: 3.16.0
+  version: 3.19.0
 
 source:
   git_url: https://github.com/conda/conda
-  git_tag: 3.16.0
+  git_tag: 3.19.0
 
 requirements:
   build:

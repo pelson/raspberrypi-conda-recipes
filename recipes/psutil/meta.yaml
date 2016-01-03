@@ -1,0 +1,24 @@
+package:
+  name: psutil
+  version: "3.2.2"
+
+source:
+  url: https://pypi.python.org/packages/source/p/psutil/psutil-3.2.1.tar.gz
+  fn: psutil-3.2.1.tar.gz
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - psutil
+
+about:
+  home: https://github.com/giampaolo/psutil
+  license: BSD License
+  summary: 'psutil is a cross-platform library for retrieving information onrunning processes and system utilization (CPU, memory, disks, network)in Python.'
