@@ -13,6 +13,9 @@ requirements:
   run:
     - python
 
+build:
+  number: 2
+
 test:
   imports:
     - pytz
